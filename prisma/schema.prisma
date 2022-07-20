@@ -11,24 +11,32 @@ datasource db {
 }
 
 model Task {
-  id   Int     @id @default(autoincrement())
-  name String
-  desc String?
+  id        Int        @id @default(autoincrement())
+  name      String
+  desc      String?
+  questions Question[]
 
   @@map("tasks")
 }
 
 model Question {
-  id   Int    @id @default(autoincrement())
-  body String
+  id     Int    @id @default(autoincrement())
+  body   String
+  taskId Int?   @map("task_id")
+
+  Answers Answer[]
+  Task    Task?    @relation(fields: [taskId], references: [id])
 
   @@map("questions")
 }
 
 model Answer {
-  id      Int     @id @default(autoincrement())
-  body    String
-  correct Boolean
+  id         Int     @id @default(autoincrement())
+  body       String
+  correct    Boolean
+  questionId Int?    @map("question_id")
+
+  Question Question? @relation(fields: [questionId], references: [id])
 
   @@map("answers")
 }
