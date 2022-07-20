@@ -8,6 +8,8 @@ const fastify = Fastify();
 fastify.register(require('@fastify/cors'));
 fastify.register(require('@fastify/sensible'));
 
+fastify.register(require('./routes/ping'));
+
 fastify.listen({ port, host }, (err, addr) => {
     if (err) {
         console.log(err);
