@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@faker-js/faker': ^7.3.0
   '@fastify/cors': ^8.0.0
   '@fastify/sensible': ^5.1.0
   '@prisma/client': ^4.1.0
@@ -17,10 +18,16 @@ dependencies:
   fastify-plugin: 4.0.0
 
 devDependencies:
+  '@faker-js/faker': 7.3.0
   dotenv: 16.0.1
   prisma: 4.1.0
 
 packages:
+
+  /@faker-js/faker/7.3.0:
+    resolution: {integrity: sha512-1W0PZezq2rxlAssoWemi9gFRD8IQxvf0FPL5Km3TOmGHFG7ib0TbFBJ0yC7D/1NsxunjNTK6WjUXV8ao/mKZ5w==}
+    engines: {node: '>=14.0.0', npm: '>=6.0.0'}
+    dev: true
 
   /@fastify/ajv-compiler/3.1.2:
     resolution: {integrity: sha512-m2nzzQJeuVmeGOB9rnII9sZiY8AZ02a9WMQfMBfK1jxdFnxm3FPYKGbYpPjODj4halNogwpolyugbTNpnDCi0A==}

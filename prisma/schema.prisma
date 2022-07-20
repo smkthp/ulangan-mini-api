@@ -24,8 +24,8 @@ model Question {
   body   String
   taskId Int?   @map("task_id")
 
-  Answers Answer[]
-  Task    Task?    @relation(fields: [taskId], references: [id])
+  answers Answer[]
+  task    Task?    @relation(fields: [taskId], references: [id])
 
   @@map("questions")
 }
@@ -36,7 +36,7 @@ model Answer {
   correct    Boolean
   questionId Int?    @map("question_id")
 
-  Question Question? @relation(fields: [questionId], references: [id])
+  question Question? @relation(fields: [questionId], references: [id])
 
   @@map("answers")
 }
