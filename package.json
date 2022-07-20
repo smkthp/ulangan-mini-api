@@ -1,0 +1,20 @@
+{
+  "name": "ulanganminiserver",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "dev": "node -r dotenv/config app"
+  },
+  "repository": "https://github.com/smkthp/ulanganminiserver.git",
+  "author": "BayuDC <dev.bayudc@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@fastify/cors": "^8.0.0",
+    "@fastify/sensible": "^5.1.0",
+    "fastify": "^4.2.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.1"
+  }
+}
