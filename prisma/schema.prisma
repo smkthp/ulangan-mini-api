@@ -9,3 +9,26 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Task {
+  id   Int     @id @default(autoincrement())
+  name String
+  desc String?
+
+  @@map("tasks")
+}
+
+model Question {
+  id   Int    @id @default(autoincrement())
+  body String
+
+  @@map("questions")
+}
+
+model Answer {
+  id      Int     @id @default(autoincrement())
+  body    String
+  correct Boolean
+
+  @@map("answers")
+}

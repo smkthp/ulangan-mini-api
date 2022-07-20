@@ -4,7 +4,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node app",
-    "dev": "node -r dotenv/config app"
+    "dev": "node -r dotenv/config app",
+    "db": "prisma db push --force-reset"
   },
   "repository": "https://github.com/smkthp/ulanganminiserver.git",
   "author": "BayuDC <dev.bayudc@gmail.com>",
@@ -12,11 +13,12 @@
   "dependencies": {
     "@fastify/cors": "^8.0.0",
     "@fastify/sensible": "^5.1.0",
+    "@prisma/client": "^4.1.0",
     "fastify": "^4.2.1",
-    "fastify-plugin": "^4.0.0",
-    "prisma": "^4.1.0"
+    "fastify-plugin": "^4.0.0"
   },
   "devDependencies": {
-    "dotenv": "^16.0.1"
+    "dotenv": "^16.0.1",
+    "prisma": "^4.1.0"
   }
 }
