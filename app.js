@@ -12,6 +12,7 @@ fastify.register(require('./plugins/error'));
 fastify.register(require('./plugins/state'));
 
 fastify.register(require('./routes/ping'));
+fastify.register(require('./routes/task'));
 
 fastify.listen({ port, host }, (err, addr) => {
     if (err) {
